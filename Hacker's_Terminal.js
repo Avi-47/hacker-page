@@ -15,7 +15,7 @@ function sleep(ms){
     })
 }
 
-const speed = 55;
+const speed = 40;
 async function displayMessages() {
     const container = document.getElementById("container")
     const progress_bar = document.getElementById("progress_bar")
@@ -33,10 +33,10 @@ async function displayMessages() {
         }
 
         let startTime = Date.now();
-        while(Date.now()-startTime<900){
+        while(Date.now()-startTime<3600){
             messageElement.textContent = message + dots[dotidx]
             dotidx = (dotidx+1)%dots.length;
-            await sleep(100)
+            await sleep(400)
         }
         if(message=="Sending all password and personal files to server"){
             progress_container.style.display = "block";
